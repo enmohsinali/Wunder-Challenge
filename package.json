@@ -1,0 +1,34 @@
+{
+  "name": "wunder-challenge",
+  "version": "1.0.0",
+  "description": "A simple checkout system with discount promotions",
+  "main": "./dist/main.js",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json",
+    "test": "jest",
+    "start": "tsc --project ./tsconfig.json && node ./dist/main.js"
+  },
+  "keywords": [
+    "checkout",
+    "discount",
+    "promotions"
+  ],
+  "directories": {
+    "test": "./dist/tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enmohsinali/Wunder-Challenge.git"
+  },
+  "author": "Mohsin Ali (enmohsinali@gmail.com)",
+  "bugs": {
+    "url": "https://github.com/enmohsinali/Wunder-Challenge/issues"
+  },
+  "homepage": "https://github.com/enmohsinali/Wunder-Challenge#readme",
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "ts-jest": "^29.0.5"
+  }
+}
