@@ -55,7 +55,7 @@ export class Checkout {
         return discountTotal;
     }
 
-    total() {
+    get total() {
         const total = this.items.reduce((acc, item) => acc + item.price, 0);
 
         const itemDiscountTotal = this.applyItemDiscounts();

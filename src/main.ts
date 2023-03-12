@@ -34,5 +34,5 @@ const co = new Checkout(promotionalRules, products);
 co.scan("001");
 co.scan("002");
 co.scan("003");
-const total1 = co.total(); // 29.65
+const total1 = co.total; // 29.65
 console.log(total1)
