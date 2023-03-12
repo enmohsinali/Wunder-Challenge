@@ -11,6 +11,9 @@ export class Checkout {
         this.products = products;
     }
 
+    addProducts(product: Product) {
+        this.products.push(product);
+    }
 
     scan(code: string) {
         const product = this.products.find((p) => p.code === code);
@@ -19,6 +22,10 @@ export class Checkout {
         } else {
             console.log(`Product with code ${code} not found.`);
         }
+    }
+
+    clearCart(){
+        this.items = [];
     }
     private applyItemDiscounts(): number {
         let discountTotal = 0;
