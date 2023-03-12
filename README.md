@@ -8,7 +8,6 @@
 This project implements a checkout system for a store using TypeScript. The system can scan products, calculate their total price, and apply promotions to give discounts on certain items or on the total purchase. The code is designed to be modular and extensible, allowing new types of promotions or products to be added easily.
 
 ## Architecture
-### Architecture
 
 The code consists of several modules:
 
