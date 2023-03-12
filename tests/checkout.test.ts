@@ -28,13 +28,38 @@ const promotionalRules: Promotion[] = [
 
 describe('Checkout', () => {
   describe('total', () => {
-    it('should return the correct total for Test', () => {
+    it('should return the correct total for Test 1', () => {
       const co = new Checkout(promotionalRules, products);
       co.scan('001');
       co.scan('002');
       co.scan('003');
       const total = co.total;
       expect(total).toEqual('29.65');
+    });
+
+    it('should return the correct total for Test 2', () => {
+      const co = new Checkout(promotionalRules, products);
+      co.scan('002');
+      co.scan('001');
+      co.scan('002');
+      const total = co.total;
+      expect(total).toEqual('9.93');
+    });
+
+    it('should return the correct total for Test 3', () => {
+      const co = new Checkout(promotionalRules, products);
+      co.scan('002');
+      co.scan('001');
+      co.scan('002');
+      co.scan('003');
+      const total = co.total;
+      expect(total).toEqual('31.44');
+    });
+
+    it('should return 0 when the cart is empty', () => {
+      const co = new Checkout(promotionalRules, products);
+      const total = co.total;
+      expect(total).toEqual('0.00');
     });
   });
 });
